@@ -20,12 +20,28 @@ public class QualifierTests {
     @Autowired
     private Computer computer;
 
+    @Autowired
+    @Qualifier("outback")
+    private Restaurant outback;
+
+    @Autowired
+    private Restaurant vips;
+
+//    @Autowired
+//    private Restaurant restaurant;
+
     @Test
     public void qualifierTest(){
         log.info("---------------------------------");
         log.info("desktop : " + desktop.getScreenWidth());
         log.info("laptop : " + laptop.getScreenWidth());
         log.info("computer : " + computer.getScreenWidth());
+        log.info("---------------------------------");
+
+        log.info("---------------------------------");
+        log.info("outback : " + outback.hasSalad());
+        log.info("vips : " + vips.hasSalad());
+        log.info("steak price : " + Restaurant.steak);
         log.info("---------------------------------");
     }
 

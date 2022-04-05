@@ -12,11 +12,19 @@ public class DependencyTests {
     @Autowired
     private Coding coding;
 
+    @Autowired
+    private Restaurant restaurant;
+
     @Test
     public void checkDI(){
         log.info("-----------------------");
         log.info("coding : " + coding);
         log.info("computer : " + coding.getComputer());
+        log.info("-----------------------");
+
+        log.info("-----------------------");
+        log.info("restaurant : " + restaurant);
+        log.info("chef : " + restaurant.getChef());
         log.info("-----------------------");
     }
 }
